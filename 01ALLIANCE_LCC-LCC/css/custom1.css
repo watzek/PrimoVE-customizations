@@ -1,0 +1,249 @@
+
+/* Emergency Broadcast Banner*/
+/*
+body::before {
+		content: "Watzek and Boley Library services and building hours have been modified due to the COVID-19 pandemic. Please visit https://library.lclark.edu/coronavirus for the latest Watzek Library information, and https://library.lclark.edu/law/coronavirus for the latest Boley Law Library information related to the COVID-19 pandemic. These pages include any changes to building hours, borrowing, and ways you can receive support.";
+		display: inline-block;
+		background: #e66b3f;
+		text-align: center;
+		width: 100%;
+		font-weight: bold;
+    padding: 10px;
+}
+
+*/
+
+
+.md-button.button-with-menu-arrow .menu-arrow:after{ /*fix -> arrow placement next to "Menu" LIVE lja 9/17/18*/
+    display:inline-block;
+    top:0;
+}
+
+prm-search-bar {
+  background-color: transparent;
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  -ms-flex-order: 1;
+  -webkit-order: 1;
+  order: 1
+}
+
+prm-topbar {
+  height: 45px;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2
+}
+
+prm-topbar .top-nav-bar {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+prm-browse-search-bar {
+  background-color: transparent;
+}
+
+prm-user-area md-fab-toolbar.md-is-open md-fab-trigger ._md-fab-toolbar-background {
+  /*"sign in" bar*/
+  background-color: #333 !important;
+}
+
+prm-logo .product-logo {
+  padding: 0 1rem;
+}
+
+.top-nav-bar .item-content,
+prm-user-area .user-menu-button .user-name {
+  color: white;
+}
+
+button.switch-to-advanced {
+  font-weight: bold;
+}
+
+prm-account .header,
+prm-full-view-cont .header,
+prm-explore-main .header {
+  background: url("https://primo.lclark.edu/primo-explore/custom/LCC/img/test-header-3-desat.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: .2rem solid #e66b3f;
+}
+
+prm-search-result-frbr-line {
+  display: none;
+}
+
+#slaask-button {
+  -webkit-box-shadow: none!important;
+  box-shadow: none!important;
+}
+
+#slaask-button .slaask-button-image {
+  border: 0;
+  background-color: transparent;
+}
+
+
+/*Hide "tags" added in may release as per:
+https://knowledge.exlibrisgroup.com/Primo/Knowledge_Articles/How_to_disable_the_tags_in_Primo_classic_and_new_UI*/
+
+[aria-label="Tags"] {
+  display: none;
+}
+
+#tags {
+  display: none;
+}
+
+
+/*hide browse screen headings, as per UPORT: 00424048*/
+
+.text-italic.text-in-brackets {
+  display: none;
+}
+
+
+/*hide browse link in main menu so it can be re-added in PBO*/
+
+
+/* commented out JM*/
+
+prm-main-menu .top-nav-bar-links>a:nth-of-type(5) {
+  display: none;
+}
+
+
+/*enable clickable custom logo*/
+
+prm-logo div.product-logo {
+  display: none;
+}
+
+prm-logo div.product-logo-local {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+
+/* Hides link icon in full display, b/c it's not a link! */
+
+div.section-body prm-brief-result-container div.result-item-text prm-search-result-availability-line div prm-icon md-icon[md-svg-icon="primo-ui:link"] {
+  display: none;
+}
+
+
+/* adresses orange Find & Request links turning green when you click it*/
+
+.does_not_exist_in_my_institution_available,
+.available_in_other_institution {
+  color: #e08303;
+}
+
+
+/* hides extra worldcat sections from facets menu, works with worldcat.js  */
+
+.WC_hide {
+  display: none;
+}
+
+
+/* for making colors match (and not blue) for location info on full record displays    */
+
+
+/*anim test*/
+
+.animate-if.ng-enter,
+.animate-if.ng-leave {
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+div>span span.unavailable_in_institution span.best-location-library-code.locations-link,
+div>span span.unavailable_in_institution span.best-location-sub-location.locations-link,
+div>span span.unavailable_in_institution span.best-location-delivery.locations-link {
+  color: gray;
+}
+
+div>span span.available_in_institution span.best-location-library-code.locations-link,
+div>span span.available_in_institution span.best-location-sub-location.locations-link,
+div>span span.available_in_institution span.best-location-delivery.locations-link {
+  color: #0f7d00;
+}
+
+.rreq.md-button.md-raised:not([disabled]) {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background-color: white;
+  color: blue;
+}
+
+.rreq.md-button:not([disabled]):hover {
+  background-color: rgba(193, 193, 193, 0.96);
+  color: rgba(44, 65, 164, 0.96);
+  transition: 0.3s;
+  color: blue;
+}
+
+/* hides jacket images on BX section */
+ div.media-figure{display:none;}
+
+
+/* disable RTA links b/c they're bad*/
+
+prm-search-result-availability-line div button[title='Full text available'] {
+   pointer-events: none;
+   cursor: default;
+
+}
+prm-search-result-availability-line div button[title='Full text available'] span{
+  /*color: #3a3a3a;*/
+}
+
+prm-search-result-availability-line div button[title='Full text available'] md-icon{
+display:none;
+
+}
+
+/* Add loading spinner to mashup parent */
+
+prm-alma-mashup {
+  background-image: url(/primo-explore/custom/LCC/img/spinner.gif);
+  min-height: 50px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+enlarge-cover button.md-button {
+position: absolute;
+   top: 0;
+   margin: 0;
+   height: 100%;
+   width: 100%;
+}
+
+
+div.top-nav-bar-links div:hov{
+
+	background-color:black;
+}
+
+/* side bar */
+.md-dialog-container.fixed-container{background-color: transparent;}
+
+/* login box   */
+md-dialog.light-on-dark-dialog{background-color: #000000; color:#EBEBEB; font-style: bold;}
+md-dialog.light-on-dark-dialog .md-list[class$=-line] md-list-item.list-login .md-button, md-dialog.light-on-dark-dialog .md-list md-list-item.list-login .md-button, md-dialog.light-on-dark-dialog md-list md-list-item.list-login .md-button{color: #EBEBEB; font-style:bold;}
